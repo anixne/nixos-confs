@@ -14,6 +14,7 @@ in {
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+ 
 
   # Enabling the Flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -142,11 +143,12 @@ in {
       chromium
       remmina
       mtr
+      thunar
       python3
       zlib
       unzip
       easyeffects
-
+      qbittorrent
       telegram-desktop
       vlc
       osu-lazer-bin
