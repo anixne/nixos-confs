@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/astronvim.nix
+  ];
+
   home.username = "anixne";
   home.homeDirectory = "/home/anixne";
 
@@ -12,33 +16,30 @@
     #editors
     vscode
 
+    #terminals
+    alacritty
+
     # archives
     zip
     xz
     unzip
 
     # networking tools
-    mtr # A network diagnostic tool
+    mtr 
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils
   
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
+    btop
 
-    # system call monitoring
-    strace # system call monitoring
-    ltrace # library call monitoring
-    lsof # list open files
 
-    # syst:em tools
+    # system
     sysstat
-    ethtool
-    pciutils # lspci
-    usbutils # lsusb
+    pciutils
+    usbutils
     libnotify
     slurp
     grim
+    gh
     wl-clipboard
     impala
     pavucontrol
@@ -51,6 +52,8 @@
     noctalia-shell
     fuzzel
     tree-sitter
+    wttrbar
+    networkmanagerapplet
 
     #programming
     rustup
@@ -58,6 +61,8 @@
     gdb
     ghc
     python3
+    cabal-install
+    nixd
 
     #other apps
     telegram-desktop
@@ -69,20 +74,7 @@
     spotify
     
   ];
-  # basic configuration of neovim
-  programs.neovim = {
-  enable = true;
-  plugins = with pkgs.vimPlugins; [
-    (nvim-treesitter.withPlugins (plugins: with plugins; [
-      vimdoc
-      lua
-      query
-      c
-      haskell
-    ]))
-  ];
-};
-  # basic configuration of git, please change to your own
+ 
   programs.git = {
     enable = true;
     userName = "anixne";
