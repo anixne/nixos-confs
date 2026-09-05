@@ -80,6 +80,7 @@ in {
 
 
   programs.niri.enable = true;
+  programs.zsh.enable = true;
 
 
   xdg.portal = {
@@ -92,7 +93,7 @@ in {
     wayland.enable = true;
     theme = "maya";
   };
-
+  users.defaultUserShell = pkgs.zsh;
   users.users."anixne" = {
     isNormalUser = true;
     description = "anixne";

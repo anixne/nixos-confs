@@ -14,7 +14,7 @@
       };
       core = {
         editor = "nvim";
-      }
+      };
     };
 
     extraConfig = {
