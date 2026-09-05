@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./modules/astronvim.nix
-    ./modules/git.nix
-    ./modules/zsh.nix
-    ./modules/zoxide.nix
-    ./modules/starship.nix
+    ../../modules/astronvim.nix
+    ../../modules/git.nix
+    ../../modules/zsh.nix
+    ../../modules/zoxide.nix
+    ../../modules/starship.nix
   ];
 
   home.username = "anixne";

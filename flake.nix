@@ -23,14 +23,14 @@ outputs = {
       specialArgs = {inherit inputs;};
       # system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./machines/kusanagi/conf.nix
         
         inputs.home-manager.nixosModules.home-manager
         {
          home-manager.useGlobalPkgs = true;
          home-manager.useUserPackages = true;
 
-         home-manager.users.anixne = import ./home.nix;
+         home-manager.users.anixne = import ./machines/kusanagi/home.nix;
         }
       ];
     };
