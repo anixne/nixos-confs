@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/astronvim.nix
+    ./modules/git.nix
   ];
 
   home.username = "anixne";
@@ -75,11 +76,5 @@
     
   ];
  
-  programs.git = {
-    enable = true;
-    userName = "anixne";
-    userEmail = "mobilecoderdev@gmail.com";
-  };
-
   home.stateVersion = "26.05";
 }
