@@ -43,7 +43,6 @@
     libnotify
     slurp
     grim
-    gh
     wl-clipboard
     impala
     pavucontrol
