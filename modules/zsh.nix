@@ -22,7 +22,15 @@
     save = 10000;
     path = "${config.xdg.dataHome}/zsh/history";
     };
-    
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+
+      theme = "robbyrussell";
+    };
   shellAliases = {
     ydl = "yt-dlp -o '%(title)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'";
     adl = "yt-dlp -o '%(title)s.%(ext)s' -f 'bestaudio[ext=m4a]/best' --extract-audio";
