@@ -47,7 +47,7 @@
     impala
     pavucontrol
     blueman
-    swww
+    awww
     swaynotificationcenter
     foot
     regreet
@@ -57,6 +57,7 @@
     tree-sitter
     wttrbar
     networkmanagerapplet
+    thunar
 
     #programming
     rustup
