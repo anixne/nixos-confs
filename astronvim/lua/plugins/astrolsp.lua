@@ -10,6 +10,19 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
+
+    mason = {
+      servers = {
+        hls = false,
+      },
+    },
+
+    config = {
+      hls = {
+        cmd = {"haskell-language-server-wrapper", "--lsp"},
+        filetypes = {"haskell", "lhaskell"},
+      },
+    },
     -- Configuration table of features provided by AstroLSP
     features = {
       codelens = true, -- enable/disable codelens refresh on start

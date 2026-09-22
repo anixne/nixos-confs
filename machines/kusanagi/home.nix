@@ -7,6 +7,8 @@
     ../../modules/zsh.nix
     ../../modules/zoxide.nix
     ../../modules/starship.nix
+    ../../modules/haskell.nix
+    ../../modules/vscode.nix
   ];
 
   home.username = "anixne";
@@ -16,10 +18,6 @@
   home.packages = with pkgs; [
     fastfetch
     
-
-    #editors
-    vscode
-
     #terminals
     alacritty
 
@@ -57,15 +55,15 @@
     tree-sitter
     wttrbar
     networkmanagerapplet
-    thunar
+    kdePackages.dolphin
+    kdePackages.kio-extras
+    mtpfs
 
     #programming
     rustup
     gcc
     gdb
-    ghc
     python3
-    cabal-install
     nixd
 
     #other apps

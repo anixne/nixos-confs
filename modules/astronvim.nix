@@ -8,7 +8,7 @@
     fzf
     nodejs_24
     tree-sitter
-  ];
+  ]; 
 
   home.sessionVariables = {
     EDITOR = "nvim";
