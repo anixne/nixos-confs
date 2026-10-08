@@ -9,6 +9,7 @@
     ../../modules/starship.nix
     ../../modules/haskell.nix
     ../../modules/vscode.nix
+    ../../modules/zed/default.nix
   ];
 
   home.username = "anixne";
@@ -74,6 +75,8 @@
     chromium
     libreoffice
     spotify
+    mpv
+    discord
     
   ];
  

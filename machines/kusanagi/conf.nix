@@ -21,6 +21,7 @@ in {
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = ["radeon.si_support=0" "amdgpu.si_support=1"];
   boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.enable = true; 
   services.fprintd.enable = true;
   services.fprintd.tod.enable = true;
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
@@ -85,6 +86,7 @@ in {
 
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [pkgs.xdg-desktop-portal-gnome];
   };
  
