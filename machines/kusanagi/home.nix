@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs,nixpkgs-unstable, ... }:
 {
   imports = [
     ../../modules/astronvim.nix
@@ -15,7 +14,9 @@
   home.username = "anixne";
   home.homeDirectory = "/home/anixne";
 
-
+  home.sessionVariables = {
+    DISPLAY = ":0";
+  };
   home.packages = with pkgs; [
     fastfetch
     
@@ -56,8 +57,7 @@
     tree-sitter
     wttrbar
     networkmanagerapplet
-    kdePackages.dolphin
-    kdePackages.kio-extras
+    thunar
     mtpfs
 
     #programming
@@ -69,16 +69,23 @@
 
     #other apps
     telegram-desktop
+    element-desktop
     qbittorrent
     vlc
     osu-lazer-bin
     chromium
     libreoffice
-    spotify
     mpv
     discord
+    xwayland-satellite
     
-  ];
+  ]
+   ++ (
+      with nixpkgs-unstable; [
+        ayugram-desktop
+        spotify
+      ]
+    );
  
   home.stateVersion = "26.05";
 }

@@ -67,7 +67,7 @@
     };
   };
   inlay_hints = {
-    enabled = false;
+    enabled = true;
   };
   agent = {
     enabled = false;

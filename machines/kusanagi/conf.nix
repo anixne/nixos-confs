@@ -83,7 +83,7 @@ in {
   programs.niri.enable = true;
   programs.zsh.enable = true;
 
-
+  programs.xwayland.enable = true;
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
@@ -111,12 +111,7 @@ in {
     [
       vim
       wget
-    ]
-    ++ (
-      with nixpkgs-unstable; [
-        ayugram-desktop
-      ]
-    );
+    ];
   fonts = {
      packages = with pkgs; [
       nerd-fonts.jetbrains-mono

@@ -18,6 +18,11 @@ outputs = {
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
+    
+    unstable-pkgs = import inputs.nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };  
   in {
     nixosConfigurations.kusanagi = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
@@ -29,6 +34,8 @@ outputs = {
         {
          home-manager.useGlobalPkgs = true;
          home-manager.useUserPackages = true;
+
+         home-manager.extraSpecialArgs = { nixpkgs-unstable = unstable-pkgs; };   
 
          home-manager.users.anixne = import ./machines/kusanagi/home.nix;
         }
